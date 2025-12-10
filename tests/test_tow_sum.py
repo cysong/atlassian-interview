@@ -1,4 +1,3 @@
-# 从 src 目录导入待测试的函数
 from src.two_sum import two_sum 
 
 def test_two_sum_basic() -> None:
