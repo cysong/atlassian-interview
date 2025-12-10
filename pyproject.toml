@@ -1,0 +1,10 @@
+[project]
+name = "atlassian-interview"
+version = "0.1.0"
+description = "Development Environment for Atlassian Interview"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pytest>=9.0.1",
+    "textual>=6.7.1",
+]
