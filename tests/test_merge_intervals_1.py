@@ -1,4 +1,4 @@
-from src.merge_intervals import Solution
+from src.merge_intervals_1 import Solution
 
 import pytest
 
@@ -11,6 +11,6 @@ test_data = [
 
 
 @pytest.mark.parametrize("input, expected", test_data)
-def test_output(input, expected):
+def test_merge(input, expected):
     solution  = Solution(input)
     assert solution.merge() == expected
