@@ -1,3 +1,14 @@
+'''
+We are building a notification system for our build pipeline. The logic works as follows:
+1. When a build fails, the system should record the failure, including the version number and all associated commit authors.
+    No notifications are sent at this stage.
+2. When a build succeeds, the system should notify all users associated with the current successful build, plus any users whose earlier builds had previously failed and have not yet been acknowledged.
+    In other words, every build success triggers notifications to:
+    - the authors of the successful build itself, and
+    - the authors of any earlier failed builds.
+After sending the notifications, the system clears the stored failure records until new failures occur.
+'''
+
 
 from abc import ABC, abstractmethod
 from collections import deque
