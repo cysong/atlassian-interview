@@ -13,4 +13,4 @@ test_data = [
 @pytest.mark.parametrize("input, expected", test_data)
 def test_output(input, expected):
     solution  = Solution(input)
-    assert solution.output() == expected
+    assert solution.merge() == expected
